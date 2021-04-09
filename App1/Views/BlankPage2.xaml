@@ -5,6 +5,8 @@
     xmlns:local="using:App1.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:lottie="using:Microsoft.Toolkit.Uwp.UI.Lottie"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -21,7 +23,9 @@
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Добро пожаловать на вторую страницу" FontSize="32" FontFamily="Bahnschrift" FontStretch="ExtraCondensed" FontWeight="ExtraLight"/>
-
+            <muxc:AnimatedVisualPlayer x:Name="LottiePlayer" Width="480">
+                <lottie:LottieVisualSource x:Name="LottieJsonSource" UriSource="ms-appx:///medical.json"/>
+            </muxc:AnimatedVisualPlayer>
         </StackPanel>
     </Grid>
 </Page>
