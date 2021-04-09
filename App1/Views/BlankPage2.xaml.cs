@@ -22,9 +22,16 @@ namespace App1.Views
     /// </summary>
     public sealed partial class BlankPage2 : Page
     {
+        public ViewModels.ViewModel1 ViewModel { get; set; } = new ViewModels.ViewModel1();
         public BlankPage2()
         {
             this.InitializeComponent();
+            ViewModel.FrameVM = Window.Current.Content as Frame;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.FrameVM.Navigate(typeof(BlankPage1));
         }
     }
 }

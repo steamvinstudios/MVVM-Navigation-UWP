@@ -33,7 +33,27 @@ namespace App1.Views
             {
                 Content = new Grid
                 {
-                    Background = new SolidColorBrush(Colors.Orange),
+                    Background = new LinearGradientBrush
+                    {
+                        GradientStops =
+                        {
+                            new GradientStop
+                            {
+                                Color = Colors.Yellow,
+                                Offset = 0
+                            },
+                            new GradientStop
+                            {
+                                Color = Colors.Orange,
+                                Offset = 0.5
+                            },
+                            new GradientStop
+                            {
+                                Color = Colors.OrangeRed,
+                                Offset = 1
+                            }
+                        }
+                    },
                     Children =
                     {
                         new Button
@@ -44,7 +64,7 @@ namespace App1.Views
                             Command = ViewModel.GoNextPageCommand,
                             Content = new TextBlock
                             {
-                                Text = "текст на кнопке с первой страницы",
+                                Text = "🐱‍🏍 Next Page",
                                 FontSize = 32
                             }
                         }

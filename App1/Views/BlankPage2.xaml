@@ -17,6 +17,11 @@
                 <GradientStop Color="OrangeRed" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBlock Text="Добро пожаловать на вторую страницу" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" FontFamily="Bahnschrift" FontStretch="ExtraCondensed" FontWeight="ExtraLight"/>
+        <Button Style="{ThemeResource NavigationBackButtonNormalStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click"/>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Добро пожаловать на вторую страницу" FontSize="32" FontFamily="Bahnschrift" FontStretch="ExtraCondensed" FontWeight="ExtraLight"/>
+
+        </StackPanel>
     </Grid>
 </Page>
